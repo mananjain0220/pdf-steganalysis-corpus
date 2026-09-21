@@ -1,0 +1,2133 @@
+{
+  "results": [
+    {
+      "balanced_accuracy": 0.1922000164299088,
+      "confusion_matrix": [
+        [
+          188,
+          40,
+          0,
+          3,
+          1,
+          0
+        ],
+        [
+          130,
+          56,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          144,
+          30,
+          4,
+          0,
+          0,
+          4
+        ],
+        [
+          264,
+          72,
+          0,
+          0,
+          4,
+          8
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          296,
+          96,
+          0,
+          0,
+          4,
+          8
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "a0_steganography",
+        "operator_lsb",
+        "tj_operator",
+        "whitetext_steganography",
+        "xmp_steganography",
+        "xref_steganography"
+      ],
+      "macro_f1": 0.10199867846488131,
+      "model": "logistic_regression",
+      "per_class": {
+        "a0_steganography": {
+          "f1-score": 0.29984051036682613,
+          "precision": 0.18395303326810175,
+          "recall": 0.8103448275862069,
+          "support": 232.0
+        },
+        "accuracy": 0.1887905604719764,
+        "macro avg": {
+          "f1-score": 0.10199867846488131,
+          "precision": 0.2953120827258917,
+          "recall": 0.1922000164299088,
+          "support": 1356.0
+        },
+        "operator_lsb": {
+          "f1-score": 0.23140495867768596,
+          "precision": 0.18791946308724833,
+          "recall": 0.3010752688172043,
+          "support": 186.0
+        },
+        "tj_operator": {
+          "f1-score": 0.043010752688172046,
+          "precision": 1.0,
+          "recall": 0.02197802197802198,
+          "support": 182.0
+        },
+        "weighted avg": {
+          "f1-score": 0.10005719817645169,
+          "precision": 0.31064168425695265,
+          "recall": 0.1887905604719764,
+          "support": 1356.0
+        },
+        "whitetext_steganography": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 348.0
+        },
+        "xmp_steganography": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 4.0
+        },
+        "xref_steganography": {
+          "f1-score": 0.03773584905660377,
+          "precision": 0.4,
+          "recall": 0.019801980198019802,
+          "support": 404.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "attribution",
+      "test_rows": 1356,
+      "threshold": null,
+      "train_rows": 10933,
+      "validation_rows": 1348
+    },
+    {
+      "balanced_accuracy": 0.15571939861235448,
+      "confusion_matrix": [
+        [
+          33,
+          29,
+          38,
+          65,
+          0,
+          67
+        ],
+        [
+          45,
+          9,
+          36,
+          55,
+          0,
+          41
+        ],
+        [
+          19,
+          23,
+          26,
+          61,
+          0,
+          53
+        ],
+        [
+          48,
+          51,
+          54,
+          104,
+          0,
+          91
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          53,
+          52,
+          62,
+          115,
+          0,
+          122
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "a0_steganography",
+        "operator_lsb",
+        "tj_operator",
+        "whitetext_steganography",
+        "xmp_steganography",
+        "xref_steganography"
+      ],
+      "macro_f1": 0.15429843886622385,
+      "model": "random_forest",
+      "per_class": {
+        "a0_steganography": {
+          "f1-score": 0.15348837209302327,
+          "precision": 0.16666666666666666,
+          "recall": 0.14224137931034483,
+          "support": 232.0
+        },
+        "accuracy": 0.2168141592920354,
+        "macro avg": {
+          "f1-score": 0.15429843886622385,
+          "precision": 0.154257339491322,
+          "recall": 0.15571939861235448,
+          "support": 1356.0
+        },
+        "operator_lsb": {
+          "f1-score": 0.05142857142857143,
+          "precision": 0.054878048780487805,
+          "recall": 0.04838709677419355,
+          "support": 186.0
+        },
+        "tj_operator": {
+          "f1-score": 0.1306532663316583,
+          "precision": 0.12037037037037036,
+          "recall": 0.14285714285714285,
+          "support": 182.0
+        },
+        "weighted avg": {
+          "f1-score": 0.21527551652842347,
+          "precision": 0.2154510662387691,
+          "recall": 0.2168141592920354,
+          "support": 1356.0
+        },
+        "whitetext_steganography": {
+          "f1-score": 0.2765957446808511,
+          "precision": 0.25742574257425743,
+          "recall": 0.2988505747126437,
+          "support": 348.0
+        },
+        "xmp_steganography": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 4.0
+        },
+        "xref_steganography": {
+          "f1-score": 0.31362467866323906,
+          "precision": 0.32620320855614976,
+          "recall": 0.30198019801980197,
+          "support": 404.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "attribution",
+      "test_rows": 1356,
+      "threshold": null,
+      "train_rows": 10933,
+      "validation_rows": 1348
+    },
+    {
+      "balanced_accuracy": 0.4004377890605988,
+      "confusion_matrix": [
+        [
+          43,
+          21,
+          96,
+          30,
+          4,
+          38
+        ],
+        [
+          12,
+          50,
+          51,
+          34,
+          4,
+          35
+        ],
+        [
+          24,
+          14,
+          88,
+          20,
+          8,
+          28
+        ],
+        [
+          46,
+          64,
+          68,
+          86,
+          4,
+          80
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          48,
+          84,
+          88,
+          92,
+          4,
+          88
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "a0_steganography",
+        "operator_lsb",
+        "tj_operator",
+        "whitetext_steganography",
+        "xmp_steganography",
+        "xref_steganography"
+      ],
+      "macro_f1": 0.2586078835431939,
+      "model": "logistic_regression",
+      "per_class": {
+        "a0_steganography": {
+          "f1-score": 0.2123456790123457,
+          "precision": 0.24855491329479767,
+          "recall": 0.1853448275862069,
+          "support": 232.0
+        },
+        "accuracy": 0.26474926253687314,
+        "macro avg": {
+          "f1-score": 0.2586078835431939,
+          "precision": 0.2477416817877566,
+          "recall": 0.4004377890605988,
+          "support": 1356.0
+        },
+        "operator_lsb": {
+          "f1-score": 0.2386634844868735,
+          "precision": 0.2145922746781116,
+          "recall": 0.26881720430107525,
+          "support": 186.0
+        },
+        "tj_operator": {
+          "f1-score": 0.30715532286212915,
+          "precision": 0.22506393861892582,
+          "recall": 0.4835164835164835,
+          "support": 182.0
+        },
+        "weighted avg": {
+          "f1-score": 0.26130882573054665,
+          "precision": 0.2842953870069446,
+          "recall": 0.26474926253687314,
+          "support": 1356.0
+        },
+        "whitetext_steganography": {
+          "f1-score": 0.2819672131147541,
+          "precision": 0.3282442748091603,
+          "recall": 0.2471264367816092,
+          "support": 348.0
+        },
+        "xmp_steganography": {
+          "f1-score": 0.25,
+          "precision": 0.14285714285714285,
+          "recall": 1.0,
+          "support": 4.0
+        },
+        "xref_steganography": {
+          "f1-score": 0.26151560178306094,
+          "precision": 0.3271375464684015,
+          "recall": 0.21782178217821782,
+          "support": 404.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "attribution",
+      "test_rows": 1356,
+      "threshold": null,
+      "train_rows": 10933,
+      "validation_rows": 1348
+    },
+    {
+      "balanced_accuracy": 0.4077548354433287,
+      "confusion_matrix": [
+        [
+          73,
+          0,
+          26,
+          95,
+          0,
+          38
+        ],
+        [
+          44,
+          4,
+          22,
+          101,
+          0,
+          15
+        ],
+        [
+          49,
+          0,
+          35,
+          78,
+          0,
+          20
+        ],
+        [
+          40,
+          4,
+          4,
+          192,
+          0,
+          108
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          66,
+          4,
+          24,
+          162,
+          0,
+          148
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "a0_steganography",
+        "operator_lsb",
+        "tj_operator",
+        "whitetext_steganography",
+        "xmp_steganography",
+        "xref_steganography"
+      ],
+      "macro_f1": 0.3943761618352271,
+      "model": "random_forest",
+      "per_class": {
+        "a0_steganography": {
+          "f1-score": 0.2896825396825397,
+          "precision": 0.26838235294117646,
+          "recall": 0.3146551724137931,
+          "support": 232.0
+        },
+        "accuracy": 0.336283185840708,
+        "macro avg": {
+          "f1-score": 0.3943761618352271,
+          "precision": 0.4454352516637279,
+          "recall": 0.4077548354433287,
+          "support": 1356.0
+        },
+        "operator_lsb": {
+          "f1-score": 0.04040404040404041,
+          "precision": 0.3333333333333333,
+          "recall": 0.021505376344086023,
+          "support": 186.0
+        },
+        "tj_operator": {
+          "f1-score": 0.23890784982935154,
+          "precision": 0.3153153153153153,
+          "recall": 0.19230769230769232,
+          "support": 182.0
+        },
+        "weighted avg": {
+          "f1-score": 0.31140413651014076,
+          "precision": 0.34939940969914995,
+          "recall": 0.336283185840708,
+          "support": 1356.0
+        },
+        "whitetext_steganography": {
+          "f1-score": 0.39344262295081966,
+          "precision": 0.3057324840764331,
+          "recall": 0.5517241379310345,
+          "support": 348.0
+        },
+        "xmp_steganography": {
+          "f1-score": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 4.0
+        },
+        "xref_steganography": {
+          "f1-score": 0.4038199181446112,
+          "precision": 0.44984802431610943,
+          "recall": 0.36633663366336633,
+          "support": 404.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "attribution",
+      "test_rows": 1356,
+      "threshold": null,
+      "train_rows": 10933,
+      "validation_rows": 1348
+    },
+    {
+      "auprc": 0.5155827698250717,
+      "auroc": 0.513427734375,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          64
+        ],
+        [
+          0,
+          64
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.3333333333333333,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 64.0
+        },
+        "1": {
+          "f1-score": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 64.0
+        },
+        "accuracy": 0.5,
+        "macro avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 128.0
+        },
+        "weighted avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 128.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_a0_steganography",
+      "test_rows": 128,
+      "threshold": 0.01,
+      "train_rows": 1214,
+      "validation_rows": 148
+    },
+    {
+      "auprc": 0.6131696132640192,
+      "auroc": 0.570068359375,
+      "balanced_accuracy": 0.53125,
+      "confusion_matrix": [
+        [
+          63,
+          1
+        ],
+        [
+          59,
+          5
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.41013824884792627,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.6774193548387096,
+          "precision": 0.5163934426229508,
+          "recall": 0.984375,
+          "support": 64.0
+        },
+        "1": {
+          "f1-score": 0.14285714285714285,
+          "precision": 0.8333333333333334,
+          "recall": 0.078125,
+          "support": 64.0
+        },
+        "accuracy": 0.53125,
+        "macro avg": {
+          "f1-score": 0.41013824884792627,
+          "precision": 0.674863387978142,
+          "recall": 0.53125,
+          "support": 128.0
+        },
+        "weighted avg": {
+          "f1-score": 0.41013824884792627,
+          "precision": 0.674863387978142,
+          "recall": 0.53125,
+          "support": 128.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_a0_steganography",
+      "test_rows": 128,
+      "threshold": 0.9600000000000001,
+      "train_rows": 1214,
+      "validation_rows": 148
+    },
+    {
+      "auprc": 0.824242876475695,
+      "auroc": 0.824462890625,
+      "balanced_accuracy": 0.7265625,
+      "confusion_matrix": [
+        [
+          29,
+          35
+        ],
+        [
+          0,
+          64
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.7044659937990633,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.6236559139784946,
+          "precision": 1.0,
+          "recall": 0.453125,
+          "support": 64.0
+        },
+        "1": {
+          "f1-score": 0.7852760736196319,
+          "precision": 0.6464646464646465,
+          "recall": 1.0,
+          "support": 64.0
+        },
+        "accuracy": 0.7265625,
+        "macro avg": {
+          "f1-score": 0.7044659937990633,
+          "precision": 0.8232323232323233,
+          "recall": 0.7265625,
+          "support": 128.0
+        },
+        "weighted avg": {
+          "f1-score": 0.7044659937990633,
+          "precision": 0.8232323232323233,
+          "recall": 0.7265625,
+          "support": 128.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_a0_steganography",
+      "test_rows": 128,
+      "threshold": 0.2,
+      "train_rows": 1214,
+      "validation_rows": 148
+    },
+    {
+      "auprc": 0.8962753548963102,
+      "auroc": 0.898193359375,
+      "balanced_accuracy": 0.796875,
+      "confusion_matrix": [
+        [
+          48,
+          16
+        ],
+        [
+          10,
+          54
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.7964276975776854,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.7868852459016393,
+          "precision": 0.8275862068965517,
+          "recall": 0.75,
+          "support": 64.0
+        },
+        "1": {
+          "f1-score": 0.8059701492537313,
+          "precision": 0.7714285714285715,
+          "recall": 0.84375,
+          "support": 64.0
+        },
+        "accuracy": 0.796875,
+        "macro avg": {
+          "f1-score": 0.7964276975776854,
+          "precision": 0.7995073891625616,
+          "recall": 0.796875,
+          "support": 128.0
+        },
+        "weighted avg": {
+          "f1-score": 0.7964276975776854,
+          "precision": 0.7995073891625616,
+          "recall": 0.796875,
+          "support": 128.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_a0_steganography",
+      "test_rows": 128,
+      "threshold": 0.6,
+      "train_rows": 1214,
+      "validation_rows": 148
+    },
+    {
+      "auprc": 0.5207561638096869,
+      "auroc": 0.5116,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          50
+        ],
+        [
+          0,
+          50
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.3333333333333333,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 50.0
+        },
+        "1": {
+          "f1-score": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 50.0
+        },
+        "accuracy": 0.5,
+        "macro avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 100.0
+        },
+        "weighted avg": {
+          "f1-score": 0.33333333333333326,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 100.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_operator_lsb",
+      "test_rows": 100,
+      "threshold": 0.01,
+      "train_rows": 900,
+      "validation_rows": 104
+    },
+    {
+      "auprc": 0.5125482766669119,
+      "auroc": 0.4952000000000001,
+      "balanced_accuracy": 0.52,
+      "confusion_matrix": [
+        [
+          14,
+          36
+        ],
+        [
+          12,
+          38
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.49066213921901525,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.3684210526315789,
+          "precision": 0.5384615384615384,
+          "recall": 0.28,
+          "support": 50.0
+        },
+        "1": {
+          "f1-score": 0.6129032258064516,
+          "precision": 0.5135135135135135,
+          "recall": 0.76,
+          "support": 50.0
+        },
+        "accuracy": 0.52,
+        "macro avg": {
+          "f1-score": 0.49066213921901525,
+          "precision": 0.525987525987526,
+          "recall": 0.52,
+          "support": 100.0
+        },
+        "weighted avg": {
+          "f1-score": 0.4906621392190152,
+          "precision": 0.525987525987526,
+          "recall": 0.52,
+          "support": 100.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_operator_lsb",
+      "test_rows": 100,
+      "threshold": 0.26,
+      "train_rows": 900,
+      "validation_rows": 104
+    },
+    {
+      "auprc": 0.8572354869572071,
+      "auroc": 0.8916,
+      "balanced_accuracy": 0.8,
+      "confusion_matrix": [
+        [
+          38,
+          12
+        ],
+        [
+          8,
+          42
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.7996794871794872,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.7916666666666666,
+          "precision": 0.8260869565217391,
+          "recall": 0.76,
+          "support": 50.0
+        },
+        "1": {
+          "f1-score": 0.8076923076923077,
+          "precision": 0.7777777777777778,
+          "recall": 0.84,
+          "support": 50.0
+        },
+        "accuracy": 0.8,
+        "macro avg": {
+          "f1-score": 0.7996794871794872,
+          "precision": 0.8019323671497585,
+          "recall": 0.8,
+          "support": 100.0
+        },
+        "weighted avg": {
+          "f1-score": 0.7996794871794871,
+          "precision": 0.8019323671497586,
+          "recall": 0.8,
+          "support": 100.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_operator_lsb",
+      "test_rows": 100,
+      "threshold": 0.6,
+      "train_rows": 900,
+      "validation_rows": 104
+    },
+    {
+      "auprc": 0.925274182215212,
+      "auroc": 0.9232,
+      "balanced_accuracy": 0.8,
+      "confusion_matrix": [
+        [
+          33,
+          17
+        ],
+        [
+          3,
+          47
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.7960016319869441,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.7674418604651163,
+          "precision": 0.9166666666666666,
+          "recall": 0.66,
+          "support": 50.0
+        },
+        "1": {
+          "f1-score": 0.8245614035087719,
+          "precision": 0.734375,
+          "recall": 0.94,
+          "support": 50.0
+        },
+        "accuracy": 0.8,
+        "macro avg": {
+          "f1-score": 0.7960016319869441,
+          "precision": 0.8255208333333333,
+          "recall": 0.8,
+          "support": 100.0
+        },
+        "weighted avg": {
+          "f1-score": 0.7960016319869442,
+          "precision": 0.8255208333333333,
+          "recall": 0.8,
+          "support": 100.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_operator_lsb",
+      "test_rows": 100,
+      "threshold": 0.56,
+      "train_rows": 900,
+      "validation_rows": 104
+    },
+    {
+      "auprc": 0.5177619012468299,
+      "auroc": 0.5117262591311035,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          51
+        ],
+        [
+          0,
+          51
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.3333333333333333,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 51.0
+        },
+        "1": {
+          "f1-score": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 51.0
+        },
+        "accuracy": 0.5,
+        "macro avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 102.0
+        },
+        "weighted avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 102.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_tj_operator",
+      "test_rows": 102,
+      "threshold": 0.01,
+      "train_rows": 930,
+      "validation_rows": 120
+    },
+    {
+      "auprc": 0.5979561908877108,
+      "auroc": 0.5909265667051133,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          26,
+          25
+        ],
+        [
+          26,
+          25
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.49995193694126694,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.5048543689320388,
+          "precision": 0.5,
+          "recall": 0.5098039215686274,
+          "support": 51.0
+        },
+        "1": {
+          "f1-score": 0.49504950495049505,
+          "precision": 0.5,
+          "recall": 0.49019607843137253,
+          "support": 51.0
+        },
+        "accuracy": 0.5,
+        "macro avg": {
+          "f1-score": 0.49995193694126694,
+          "precision": 0.5,
+          "recall": 0.5,
+          "support": 102.0
+        },
+        "weighted avg": {
+          "f1-score": 0.49995193694126694,
+          "precision": 0.5,
+          "recall": 0.5,
+          "support": 102.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_tj_operator",
+      "test_rows": 102,
+      "threshold": 0.65,
+      "train_rows": 930,
+      "validation_rows": 120
+    },
+    {
+      "auprc": 0.8738437423468612,
+      "auroc": 0.8765859284890427,
+      "balanced_accuracy": 0.7647058823529411,
+      "confusion_matrix": [
+        [
+          27,
+          24
+        ],
+        [
+          0,
+          51
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.7509157509157509,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.6923076923076923,
+          "precision": 1.0,
+          "recall": 0.5294117647058824,
+          "support": 51.0
+        },
+        "1": {
+          "f1-score": 0.8095238095238095,
+          "precision": 0.68,
+          "recall": 1.0,
+          "support": 51.0
+        },
+        "accuracy": 0.7647058823529411,
+        "macro avg": {
+          "f1-score": 0.7509157509157509,
+          "precision": 0.8400000000000001,
+          "recall": 0.7647058823529411,
+          "support": 102.0
+        },
+        "weighted avg": {
+          "f1-score": 0.7509157509157509,
+          "precision": 0.8400000000000001,
+          "recall": 0.7647058823529411,
+          "support": 102.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_tj_operator",
+      "test_rows": 102,
+      "threshold": 0.01,
+      "train_rows": 930,
+      "validation_rows": 120
+    },
+    {
+      "auprc": 0.9253397390642331,
+      "auroc": 0.9269511726259131,
+      "balanced_accuracy": 0.8235294117647058,
+      "confusion_matrix": [
+        [
+          33,
+          18
+        ],
+        [
+          0,
+          51
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.8178571428571428,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.7857142857142857,
+          "precision": 1.0,
+          "recall": 0.6470588235294118,
+          "support": 51.0
+        },
+        "1": {
+          "f1-score": 0.85,
+          "precision": 0.7391304347826086,
+          "recall": 1.0,
+          "support": 51.0
+        },
+        "accuracy": 0.8235294117647058,
+        "macro avg": {
+          "f1-score": 0.8178571428571428,
+          "precision": 0.8695652173913043,
+          "recall": 0.8235294117647058,
+          "support": 102.0
+        },
+        "weighted avg": {
+          "f1-score": 0.817857142857143,
+          "precision": 0.8695652173913042,
+          "recall": 0.8235294117647058,
+          "support": 102.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_tj_operator",
+      "test_rows": 102,
+      "threshold": 0.43,
+      "train_rows": 930,
+      "validation_rows": 120
+    },
+    {
+      "auprc": 0.5182099416942434,
+      "auroc": 0.5057471264367817,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          87
+        ],
+        [
+          0,
+          87
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.3333333333333333,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 87.0
+        },
+        "1": {
+          "f1-score": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 87.0
+        },
+        "accuracy": 0.5,
+        "macro avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 174.0
+        },
+        "weighted avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 174.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_whitetext_steganography",
+      "test_rows": 174,
+      "threshold": 0.01,
+      "train_rows": 1242,
+      "validation_rows": 152
+    },
+    {
+      "auprc": 0.491472154436624,
+      "auroc": 0.49920729290527155,
+      "balanced_accuracy": 0.4885057471264368,
+      "confusion_matrix": [
+        [
+          78,
+          9
+        ],
+        [
+          80,
+          7
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.3863285119873192,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.636734693877551,
+          "precision": 0.4936708860759494,
+          "recall": 0.896551724137931,
+          "support": 87.0
+        },
+        "1": {
+          "f1-score": 0.13592233009708737,
+          "precision": 0.4375,
+          "recall": 0.08045977011494253,
+          "support": 87.0
+        },
+        "accuracy": 0.4885057471264368,
+        "macro avg": {
+          "f1-score": 0.3863285119873192,
+          "precision": 0.46558544303797467,
+          "recall": 0.4885057471264368,
+          "support": 174.0
+        },
+        "weighted avg": {
+          "f1-score": 0.3863285119873192,
+          "precision": 0.4655854430379747,
+          "recall": 0.4885057471264368,
+          "support": 174.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_whitetext_steganography",
+      "test_rows": 174,
+      "threshold": 0.9,
+      "train_rows": 1242,
+      "validation_rows": 152
+    },
+    {
+      "auprc": 0.8894216340810462,
+      "auroc": 0.8883604174924032,
+      "balanced_accuracy": 0.7816091954022988,
+      "confusion_matrix": [
+        [
+          53,
+          34
+        ],
+        [
+          4,
+          83
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.7749183006535948,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.7361111111111112,
+          "precision": 0.9298245614035088,
+          "recall": 0.6091954022988506,
+          "support": 87.0
+        },
+        "1": {
+          "f1-score": 0.8137254901960784,
+          "precision": 0.7094017094017094,
+          "recall": 0.9540229885057471,
+          "support": 87.0
+        },
+        "accuracy": 0.7816091954022989,
+        "macro avg": {
+          "f1-score": 0.7749183006535948,
+          "precision": 0.819613135402609,
+          "recall": 0.7816091954022988,
+          "support": 174.0
+        },
+        "weighted avg": {
+          "f1-score": 0.7749183006535948,
+          "precision": 0.8196131354026092,
+          "recall": 0.7816091954022989,
+          "support": 174.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_whitetext_steganography",
+      "test_rows": 174,
+      "threshold": 0.46,
+      "train_rows": 1242,
+      "validation_rows": 152
+    },
+    {
+      "auprc": 0.9467307153728267,
+      "auroc": 0.9534945171092615,
+      "balanced_accuracy": 0.8563218390804598,
+      "confusion_matrix": [
+        [
+          63,
+          24
+        ],
+        [
+          1,
+          86
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.8537667663966114,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.8344370860927153,
+          "precision": 0.984375,
+          "recall": 0.7241379310344828,
+          "support": 87.0
+        },
+        "1": {
+          "f1-score": 0.8730964467005076,
+          "precision": 0.7818181818181819,
+          "recall": 0.9885057471264368,
+          "support": 87.0
+        },
+        "accuracy": 0.8563218390804598,
+        "macro avg": {
+          "f1-score": 0.8537667663966114,
+          "precision": 0.8830965909090909,
+          "recall": 0.8563218390804598,
+          "support": 174.0
+        },
+        "weighted avg": {
+          "f1-score": 0.8537667663966115,
+          "precision": 0.8830965909090908,
+          "recall": 0.8563218390804598,
+          "support": 174.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_whitetext_steganography",
+      "test_rows": 174,
+      "threshold": 0.44,
+      "train_rows": 1242,
+      "validation_rows": 152
+    },
+    {
+      "status": "insufficient_class_support",
+      "task": "binary_xmp_steganography"
+    },
+    {
+      "auprc": 0.5149837915324974,
+      "auroc": 0.5079894128026663,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          0,
+          101
+        ],
+        [
+          0,
+          101
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.3333333333333333,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 101.0
+        },
+        "1": {
+          "f1-score": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0,
+          "support": 101.0
+        },
+        "accuracy": 0.5,
+        "macro avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 202.0
+        },
+        "weighted avg": {
+          "f1-score": 0.3333333333333333,
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 202.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_xref_steganography",
+      "test_rows": 202,
+      "threshold": 0.01,
+      "train_rows": 1550,
+      "validation_rows": 186
+    },
+    {
+      "auprc": 0.5445529861118714,
+      "auroc": 0.54391726301343,
+      "balanced_accuracy": 0.5198019801980198,
+      "confusion_matrix": [
+        [
+          34,
+          67
+        ],
+        [
+          30,
+          71
+        ]
+      ],
+      "feature_set": "size_only",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.503131735767719,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.4121212121212121,
+          "precision": 0.53125,
+          "recall": 0.33663366336633666,
+          "support": 101.0
+        },
+        "1": {
+          "f1-score": 0.5941422594142259,
+          "precision": 0.5144927536231884,
+          "recall": 0.7029702970297029,
+          "support": 101.0
+        },
+        "accuracy": 0.5198019801980198,
+        "macro avg": {
+          "f1-score": 0.503131735767719,
+          "precision": 0.5228713768115942,
+          "recall": 0.5198019801980198,
+          "support": 202.0
+        },
+        "weighted avg": {
+          "f1-score": 0.5031317357677191,
+          "precision": 0.5228713768115942,
+          "recall": 0.5198019801980198,
+          "support": 202.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_xref_steganography",
+      "test_rows": 202,
+      "threshold": 0.28,
+      "train_rows": 1550,
+      "validation_rows": 186
+    },
+    {
+      "auprc": 0.886412699573309,
+      "auroc": 0.8904029016763062,
+      "balanced_accuracy": 0.7821782178217822,
+      "confusion_matrix": [
+        [
+          59,
+          42
+        ],
+        [
+          2,
+          99
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.7732884399551067,
+      "model": "logistic_regression",
+      "per_class": {
+        "0": {
+          "f1-score": 0.7283950617283951,
+          "precision": 0.9672131147540983,
+          "recall": 0.5841584158415841,
+          "support": 101.0
+        },
+        "1": {
+          "f1-score": 0.8181818181818182,
+          "precision": 0.7021276595744681,
+          "recall": 0.9801980198019802,
+          "support": 101.0
+        },
+        "accuracy": 0.7821782178217822,
+        "macro avg": {
+          "f1-score": 0.7732884399551067,
+          "precision": 0.8346703871642832,
+          "recall": 0.7821782178217822,
+          "support": 202.0
+        },
+        "weighted avg": {
+          "f1-score": 0.7732884399551065,
+          "precision": 0.8346703871642832,
+          "recall": 0.7821782178217822,
+          "support": 202.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_xref_steganography",
+      "test_rows": 202,
+      "threshold": 0.34,
+      "train_rows": 1550,
+      "validation_rows": 186
+    },
+    {
+      "auprc": 0.9170433578422521,
+      "auroc": 0.9227526713067347,
+      "balanced_accuracy": 0.8415841584158416,
+      "confusion_matrix": [
+        [
+          72,
+          29
+        ],
+        [
+          3,
+          98
+        ]
+      ],
+      "feature_set": "full",
+      "labels": [
+        "0",
+        "1"
+      ],
+      "macro_f1": 0.838915470494418,
+      "model": "random_forest",
+      "per_class": {
+        "0": {
+          "f1-score": 0.8181818181818182,
+          "precision": 0.96,
+          "recall": 0.7128712871287128,
+          "support": 101.0
+        },
+        "1": {
+          "f1-score": 0.8596491228070176,
+          "precision": 0.7716535433070866,
+          "recall": 0.9702970297029703,
+          "support": 101.0
+        },
+        "accuracy": 0.8415841584158416,
+        "macro avg": {
+          "f1-score": 0.838915470494418,
+          "precision": 0.8658267716535433,
+          "recall": 0.8415841584158416,
+          "support": 202.0
+        },
+        "weighted avg": {
+          "f1-score": 0.8389154704944178,
+          "precision": 0.8658267716535433,
+          "recall": 0.8415841584158416,
+          "support": 202.0
+        }
+      },
+      "predictor_columns": [
+        "feature_file_size_bytes",
+        "feature_byte_entropy",
+        "feature_whitespace_fraction",
+        "feature_ascii_fraction",
+        "feature_numeric_token_count",
+        "feature_decimal_token_count",
+        "feature_decimal_precision_mean",
+        "feature_eof_count",
+        "feature_trailing_bytes",
+        "feature_startxref_count",
+        "feature_linearized_present",
+        "feature_raw_count_obj",
+        "feature_raw_count_endobj",
+        "feature_raw_count_stream",
+        "feature_raw_count_endstream",
+        "feature_raw_count_xref",
+        "feature_raw_count_startxref",
+        "feature_raw_count_eof",
+        "feature_raw_count_objstm",
+        "feature_raw_count_javascript",
+        "feature_page_count",
+        "feature_object_count",
+        "feature_stream_count",
+        "feature_image_count",
+        "feature_font_count",
+        "feature_annotation_count",
+        "feature_form_present",
+        "feature_xmp_present",
+        "feature_xref_stream_present",
+        "feature_object_stream_present",
+        "feature_page_width_mean",
+        "feature_page_height_mean",
+        "feature_page_area_std",
+        "feature_stream_encoded_bytes",
+        "feature_stream_decoded_bytes",
+        "feature_stream_compression_ratio",
+        "feature_metadata_field_count",
+        "feature_metadata_character_count"
+      ],
+      "seed": 20260921,
+      "status": "pass",
+      "task": "binary_xref_steganography",
+      "test_rows": 202,
+      "threshold": 0.5,
+      "train_rows": 1550,
+      "validation_rows": 186
+    }
+  ],
+  "seed": 20260921
+}

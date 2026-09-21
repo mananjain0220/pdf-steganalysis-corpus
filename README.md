@@ -1,168 +1,85 @@
----
-pretty_name: PDF Steganalysis Corpus
-license: cc-by-4.0
-size_categories:
-  - 10K<n<100K
-tags:
-  - pdf
-  - steganalysis
-  - steganography
-  - method-attribution
-  - security-research
-  - tabular
-configs:
-  - config_name: samples
-    default: true
-    data_files:
-      - split: train
-        path: samples-train.csv.gz
-      - split: validation
-        path: samples-validation.csv.gz
-      - split: test
-        path: samples-test.csv.gz
-  - config_name: attempts
-    data_files:
-      - split: audit
-        path: attempts.csv.gz
----
+# PDF Steganalysis Corpus v2 — benchmark companion
 
-# PDF Steganalysis Corpus
+Code, documentation and measured results for PDF steganalysis research.
+Download the data and original synthetic demonstration PDFs from the
+[Hugging Face dataset](https://huggingface.co/datasets/manj0220/pdf-steganalysis-corpus).
+This repository package deliberately contains no PDF collection or feature-table mirror.
 
-**32,456 stego sample records across 11 methods, with output hashes and ten
-freshly measured byte-level features.** The accompanying audit table preserves
-74,400 embedding attempts from `cuing_methods_5k` and `new_methods_5k`.
+## Contents
 
-This is a metadata/features release for PDF steganalysis research. It contains
-no PDFs, raw payloads, passwords, keys, document text or original filenames.
+- Historical benchmark: 13,637 verified stego records across six methods and
+  1,939 clean originals, with 38 numeric single-document features.
+- All 32,456 historical sample records remain in the downloadable audit.
+- Synthetic demonstration: 120 original covers and 2,284 verified stego PDFs;
+  all 3,960 attempts are recorded, including failures.
+- Logistic regression and random forest baselines, with full-feature and
+  size-only controls, training-only preprocessing and validation thresholds.
 
-- Canonical dataset: [Hugging Face](https://huggingface.co/datasets/manj0220/pdf-steganalysis-corpus)
-- Companion code and mirrored tables: [GitHub](https://github.com/mananjain0220/pdf-steganalysis-corpus)
-- Version: `v1.0-metadata-features`, 21 September 2026
-- Maintainer: Manan Jain; contact via [GitHub issues](https://github.com/mananjain0220/pdf-steganalysis-corpus/issues)
+"Clean" means before embedding, not malware-free. Historical crawl-derived
+PDFs, payload text, keys and private configurations are not redistributed.
+Five keyed methods lack explicit historical keys and remain outside the
+verified historical track. Malformed/unverifiable samples remain in the audit.
+Synthetic examples do not establish generalization to real documents.
 
-## What this release supports
+## Run
 
-Method-attribution experiments, simple byte-feature baselines, analysis of
-method-specific generation success, and reproducible export of public tables
-from the original local corpus folders.
+Download the compact v2 files from Hugging Face into `data/`. Extract
+`benchmark-details.zip` into that same directory; leave the two PDF ZIPs zipped.
+The current package is a companion to that data release, not proof that the
+maintainer has already uploaded it. No credentials are required for public downloads.
 
-**There are no clean controls in v1.** All sample `binary_label` values are 1.
-Failed embedding attempts are not negative examples. Binary stego-vs-clean
-evaluation requires separately verified, matched clean controls. Normalization,
-rendering, robustness, and independent extraction experiments require PDFs
-obtained separately. No accuracy results or malware-ground-truth labels are
-claimed by this release.
-
-## Inventory
-
-| Method | Attempts | Reported successful attempts | Distinct released samples |
-|---|---:|---:|---:|
-| a0_steganography | 10,800 | 4,036 | 2,664 |
-| hybrid_steganography | 6,000 | 5,402 | 3,597 |
-| numfmt_steganography | 6,000 | 4,520 | 3,001 |
-| operator_lsb | 6,000 | 3,149 | 2,083 |
-| opsyn_steganography | 6,000 | 1,328 | 873 |
-| orphanstream_steganography | 6,000 | 5,976 | 3,984 |
-| tj_operator | 10,800 | 3,001 | 1,973 |
-| whitetext_steganography | 4,800 | 4,788 | 3,192 |
-| ws_steganography | 6,000 | 5,376 | 3,581 |
-| xmp_steganography | 6,000 | 5,286 | 3,524 |
-| xref_steganography | 6,000 | 5,976 | 3,984 |
-| **Total** | **74,400** | **48,838** | **32,456** |
-
-The `5k` folder suffix is a generation target, not a per-class count.
-Repeated payload fixtures produced multiple attempts referencing the same
-output path. There are four distinct message categories and 2,000 cover
-basename groups. All 32,456 current output SHA-256 values are distinct.
-Every reported-success row resolves to an existing output in this snapshot.
-These are observed counts, not extrapolations from chunk targets.
-
-## Files and loading
-
-| File | Contents |
-|---|---|
-| samples-train.csv.gz | 25,842 sample records and features |
-| samples-validation.csv.gz | 3,113 sample records and features |
-| samples-test.csv.gz | 3,501 sample records and features |
-| attempts.csv.gz | 74,400 audit rows, including failed/repeated attempts |
-| summary.json | Machine-readable counts |
-| SCHEMA.md | Fields, feature definitions and split algorithm |
-| REPRODUCIBILITY.md | Local export recipe and its limits |
-| export_corpus.py | Standalone standard-library exporter |
-| validate_release.py | Table and checksum validation |
-| SHA256SUMS | SHA-256 of release files |
-
-```python
-from datasets import load_dataset
-
-samples = load_dataset("manj0220/pdf-steganalysis-corpus", "samples")
-attempts = load_dataset("manj0220/pdf-steganalysis-corpus", "attempts")
-predictors = [c for c in samples["train"].column_names
-              if c == "file_size_bytes" or c.startswith("raw_count_")]
-# Method attribution target: samples["train"]["method"]
-# Pin revision="<commit SHA>" for a reproducible experiment.
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-lock.txt
+.venv/bin/python verify_release.py --data data
+.venv/bin/python baselines.py --data data --out recomputed-results
 ```
 
-The CSV files can also be read with Python's `gzip` and `csv`, without an
-external dataset library. Features are size plus nine literal substring
-counts recomputed from current output bytes. They are not parsed PDF object
-counts, rendered-image features, or a complete steganalysis feature set.
+Compare results with `baseline-results.json`. The tested environment is
+Python 3.14.5, macOS arm64; dependencies are pinned. The baseline and table/ZIP
+validator do not require the private embedding suite. `runtime.py` supplies
+seed and JSON helpers; its method registry is unused by these two commands.
 
-## Splits and evaluation
+See [RESULTS-v2.md](RESULTS-v2.md) for scores, counts and exclusions and
+[SCHEMA-v2.md](SCHEMA-v2.md) for tables, features, statuses and split definitions.
+The exact predictor allowlist is in the downloaded `summary-v2.json`.
+Use `task-index.parquet` for balanced per-method binary tasks; attribution
+uses verified stego samples. Never train on identifiers, hashes, statuses,
+layout, payload size, splits or paired-only information.
 
-The approximately 80/10/10 split groups cover basenames across both corpus
-families. Any groups sharing identical output bytes are merged before split
-assignment. See [SCHEMA.md](SCHEMA.md) for the exact deterministic algorithm.
-No cover ID or output SHA-256 crosses sample splits in this release.
+## Scope and limitations
 
-Message categories are shared across partitions; unseen-message performance
-is not measured by this split. Cover hashes and near-duplicate auditing are
-still needed to strengthen leakage controls. Do not train on identifiers,
-hashes, corpus names, historical success flags or duplicate counts. Keep
-opsyn's 873 samples as a visibly scarce class and report per-class support.
-There is no default class balancing, hidden test set or leaderboard.
+Generation/extraction modules are not included because their redistribution
+license is awaiting maintainer confirmation. This package therefore supports
+baseline reproduction and table/archive verification, not standalone embedding
+or independent decoding. Stored validation evidence is available in the data
+release, but this validator does not rerun rendering or payload extraction.
 
-## Provenance and validation
+Cover hashes group historical splits; exact-byte groups are merged. The 131
+near-duplicate candidates are not adjudicated. Shared message categories,
+serialization artifacts, class imbalance and scarce XMP support limit results.
+No minimum accuracy was required. No normalization or malware-detection claim
+is made. Treat unfamiliar PDFs as untrusted and use isolated research tooling.
 
-The corpus families correspond to four CUING methods and seven new-method
-implementations. Project provenance identifies the Digital Corpora
-[CC-MAIN-2021-31-PDF-UNTRUNCATED collection](https://digitalcorpora.org/corpora/file-corpora/cc-main-2021-31-pdf-untruncated/)
-and archive IDs `0000` / `0001`. Per-row archive membership and source-cover
-hashes have not been independently verified in this export.
+## Versioning
 
-Historical `success=True` is the generator's reported embed/extract round-trip
-pass. This release verifies output existence and recomputes file hashes and
-features, but does not rerun extraction. Later attempts may overwrite a path.
-The legacy feature arrays have inconsistent row lengths and are not used.
-Fresh export scripts are provided; a standalone exact PDF regeneration recipe
-and historical generator revision/seed record are not yet available.
+The v1 source release remains at
+[`4401d97e4789bc7e3304b7c0448a62f40e675492`](https://github.com/mananjain0220/pdf-steganalysis-corpus/tree/4401d97e4789bc7e3304b7c0448a62f40e675492).
+The v1 dataset remains at
+[`183403f2768dfe0eb6a2ef983db1876fb95c55a7`](https://huggingface.co/datasets/manj0220/pdf-steganalysis-corpus/tree/183403f2768dfe0eb6a2ef983db1876fb95c55a7).
+This upload package does not duplicate v1 files. Existing repository files are
+not automatically removed by uploading this package. Pin revisions when citing
+experiments; v2 has changed eligibility and splits.
 
-## Limitations and intended use
+## Licensing and contact
 
-This is an imbalanced, implementation-specific research corpus with only four
-message categories. A detector can learn implementation, document-source or
-serialization artifacts. Generalization to unseen covers, embedders, payloads,
-normalization tools and real deployments is unestablished. Steganographic
-content does not by itself establish that a document is malicious.
+New scripts: [MIT](LICENSE-CODE). Project documentation/results and original
+synthetic content: [CC BY 4.0](LICENSE-DATA-v2.md). Dependencies retain their
+own terms; see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md) and the exact
+installed-distribution notices in `dependency-notices.zip`. Licenses do not
+grant rights to third-party source PDFs. Research use is an intention, not an
+additional license restriction. Steganography is dual-use; this is not an exploit pack.
 
-The historical fixtures included synthetic command-shaped strings. Their text
-and original names are omitted. The public tables contain opaque categories
-instead. This release is intended for defensive research and reproducibility;
-it is not a malware collection. Metadata identifiers are not guarantees of
-anonymity. Please report label, provenance or release-content concerns to the
-maintainer through the linked issue tracker.
-
-## License and citation
-
-Data and documentation: [CC BY 4.0](LICENSE-DATA.md).
-Release scripts: [MIT](LICENSE-CODE). These licenses do not cover third-party
-source PDFs, which are not included. Research is the intended use, not an
-extra restriction on the open licenses.
-
-Use [CITATION.cff](CITATION.cff), and record the exact dataset commit used:
-
-> Jain, Manan (2026). PDF Steganalysis Corpus, v1.0-metadata-features.
-> https://huggingface.co/datasets/manj0220/pdf-steganalysis-corpus
-
-No paper DOI or publication status is asserted in this card. Paper-specific
-citations can be added once the corresponding bibliographic records are verified.
+Use [CITATION.cff](CITATION.cff) and the exact dataset revision. Maintainer:
+Manan Jain; contact through [GitHub issues](https://github.com/mananjain0220/pdf-steganalysis-corpus/issues).
+No unverified paper DOI or publication status is asserted.

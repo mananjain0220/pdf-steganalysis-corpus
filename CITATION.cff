@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-message: "Please cite the dataset version and pin the repository revision used."
+message: "Please cite the dataset version and pin the exact repository revision."
 type: dataset
 title: "PDF Steganalysis Corpus"
 authors:
   - family-names: Jain
     given-names: Manan
-version: "1.0-metadata-features"
+version: "2.0-benchmark-demo"
 date-released: 2026-09-21
 url: "https://huggingface.co/datasets/manj0220/pdf-steganalysis-corpus"
 repository-code: "https://github.com/mananjain0220/pdf-steganalysis-corpus"
